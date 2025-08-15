@@ -6,15 +6,19 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "next telemetry disable"
   },
   "dependencies": {
+    "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.4.6"
+    "tone": "^15.1.22"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "eslint": "9.33.0",
+    "eslint-config-next": "15.4.6",
     "tailwindcss": "^4"
   }
 }
