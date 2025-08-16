@@ -1,10 +1,15 @@
 "use client";
 
-import Image from "next/image";
+import dynamic from "next/dynamic";
+import React from "react";
+
 import Metronome from "./metronome.js";
 
-export default function Home() {
-  return (
-    <Metronome />
-  );
-}
+
+const App = ({ Component, pageProps }) => {
+  return <Metronome {...pageProps} />;
+};
+
+export default dynamic(() => Promise.resolve(App), {
+  ssr: false,
+});
